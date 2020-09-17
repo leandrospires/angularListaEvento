@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "listaDeEventos"
+    }
+  },
+  "defaultProject": "listaDeEventos",
+  "cli": {
+    "analytics": "8ac50126-b891-4451-bcfb-9d881b77e428"
+  }
 }

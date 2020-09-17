@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListaComponent } from './lista/lista.component';
+import { EnderecoPipe } from './endereco.pipe';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaComponent,
+    EnderecoPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
