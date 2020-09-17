@@ -5,14 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaComponent } from './lista/lista.component';
 import { EnderecoPipe } from './endereco.pipe';
-import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { ContatosComponent } from './contatos/contatos.component';
+//import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaComponent,
     EnderecoPipe,
-    LoginComponent
+    HomeComponent,
+    ContatosComponent
+    //LoginComponent
   ],
   imports: [
     BrowserModule,

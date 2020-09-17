@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { ContatosComponent } from './contatos/contatos.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'login',pathMatch: 'full'},
-  {path:'login', component:LoginComponent}
-
+  {path:'',redirectTo:'home',pathMatch: 'full'},
+  {path:'home', component:HomeComponent},
+  {path:'contatos/:id', component:ContatosComponent},
+  {path:'contatos', component:ContatosComponent},
+  {path:'about', loadChildren: ()=>import('./about/about.module').then(m=>m.AboutModule) }
 ];
 
 @NgModule({
