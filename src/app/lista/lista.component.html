@@ -1,24 +1,23 @@
-<table>
+<table class="table table-hover table-dark">
     <thead>
-        <tr>
-            <th>nome</th>
-            <th>data</th>
-            <th>hora</th>
-            <th>local</th>
-            <th>local.json</th>
-            <th> <button (click)="adicionandoEvento()" > + </button> </th>
-        </tr>
+      <tr>
+        <th> <button (click)="adicionandoEvento()" > + </button> </th>
+        <th>nome</th>
+        <th>data</th>
+        <th>hora</th>
+        <th>local</th>
+        <th>local.json</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let evento of listaDeEventos; let posicao = index">
-            <td> {{evento.name}} </td>
-            <td> {{evento.date | date:"dd/MM/yyyy" }} </td>
-            <td> {{evento.time}} </td>
-            <td> {{evento.location | endereco}}</td>
-            <!-- <td> {{evento.location.address}} , {{evento.location.city}}, {{evento.location.country}}</td> -->
-            <td> {{ evento.location | json }}</td>
-            <td> <button (click)="removendoEvento(posicao)"> - </button></td>
-        </tr>
-
+      <tr *ngFor="let evento of listaDeEventos; let posicao = index">
+        <td> <button (click)="removendoEvento(posicao)"> - </button></td>
+        <td> {{evento.name}} </td>
+        <td> {{evento.date | date:"dd/MM/yyyy" }} </td>
+        <td> {{evento.time}} </td>
+        <td> {{evento.location | endereco}}</td>
+        <!-- <td> {{evento.location.address}} , {{evento.location.city}}, {{evento.location.country}}</td> -->
+        <td> {{ evento.location | json }}</td>
+      </tr>
     </tbody>
-</table>
+  </table>

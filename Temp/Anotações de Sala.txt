@@ -1,4 +1,10 @@
+instalar bootstrap
+
+: npm i bootstrap
+
 https://github.com/leandrospires/angularListaEvento
+
+http://jsonplaceholder.typicode.com/users
 
 cd /d/LeandroPires/Pessoais/Estudos/Angular/codigos/projeto/listaDeEventos
 
