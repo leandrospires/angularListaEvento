@@ -35,4 +35,9 @@ export class MyServiceService {
     this.listaDeEventos.splice(posicao, 1);
   }
 
+  savePost(userId: number, post: any): Observable<any> {
+    return this.http.post(`https://jsonplaceholder.typicode.com/posts/${userId}/comments`, post);
+
+  }
+
 }

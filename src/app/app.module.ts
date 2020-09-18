@@ -8,6 +8,8 @@ import { ListaComponent } from './lista/lista.component';
 import { EnderecoPipe } from './endereco.pipe';
 import { HomeComponent } from './home/home.component';
 import { ContatosComponent } from './contatos/contatos.component';
+import { PostFormComponent } from './post-form/post-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -16,13 +18,16 @@ import { ContatosComponent } from './contatos/contatos.component';
     ListaComponent,
     EnderecoPipe,
     HomeComponent,
-    ContatosComponent
+    ContatosComponent,
+    PostFormComponent
     //LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
