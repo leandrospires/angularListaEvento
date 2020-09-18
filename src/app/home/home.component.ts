@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Eventos} from '../models/eventos'
+import { MyServiceService } from '../my-service.service';
 
 @Component({
   selector: 'app-home',
@@ -8,23 +9,23 @@ import {Eventos} from '../models/eventos'
 })
 export class HomeComponent implements OnInit {
 
-  listaDeEventos: Eventos[] = [
-    //{"name":"Fazer Compras", "date": "3/1/2025", "time": "8am", "location": {"address": "Rua São Paulo", "city": "São Paulo", "country": "Brasil"}},
-    {"name":"Fazer Compras", "date": new Date(), "time": "8am", "location": {"address": "Rua São Paulo", "city": "São Paulo", "country": "Brasil"}},
-    {"name":"Correr", "date": new Date(), "time": "9am", "location": {"address": "Rua São Paulo", "city": "São Paulo", "country": "Brasil"}}
-]
+  listaDeEventos: Eventos[] = [];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private listaService: MyServiceService) { 
   }
 
-adicionarEvento(evento: Eventos): void {
-  this.listaDeEventos.push(evento);
-}
+  ngOnInit(): void {
+    this.listaDeEventos = this.listaService.listaDeEventos;
+  }
 
-removerEvento(posicao: number): void {
-  this.listaDeEventos.splice(posicao, 1);
-}
+  adicionarEvento(evento: Eventos): void {
+    //this.listaDeEventos.push(evento);
+    this.listaService.adicionarEvento(evento);
+  }
+  
+  removerEvento(posicao: number): void {
+    //this.listaDeEventos.splice(posicao, 1);
+    this.listaService.removerEvento(posicao);
+  }
 
 }

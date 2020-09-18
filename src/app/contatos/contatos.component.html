@@ -1,1 +1,18 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">E-mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contato of contatos">
+        <th scope="row">{{ contato.id }}</th>
+        <td>{{ contato.name }}</td>
+        <td>{{ contato.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+
 <button (click)='voltarParaHome()'> Ir para Home </button>

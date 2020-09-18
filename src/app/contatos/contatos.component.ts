@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Usuario } from '../models/usuario';
+import { MyServiceService } from '../my-service.service';
 
 @Component({
   selector: 'app-contatos',
@@ -8,9 +10,13 @@ import { Router } from '@angular/router';
 })
 export class ContatosComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  contatos: Usuario[];
+
+  constructor(private router: Router, private servico: MyServiceService) { }
 
   ngOnInit(): void {
+    //usuarios=>this.contatos=usuarios
+    this.servico.listarUsuarios().subscribe(usuarios=>this.contatos=usuarios);
   }
 
   voltarParaHome(): void {
