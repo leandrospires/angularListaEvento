@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { ContatosComponent } from './contatos/contatos.component';
 import { PostFormComponent } from './post-form/post-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+
 //import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -27,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

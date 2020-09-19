@@ -12,6 +12,8 @@ import { Usuario } from './models/usuario';
 })
 export class MyServiceService {
 
+  apiUrl = "https://jsonplaceholder.typicode.com/photos";
+
   private _listaDeEventos = [
     {"name":"Fazer Compras", "date": new Date(), "time": "8am", "location": {"address": "Rua São Paulo", "city": "São Paulo", "country": "Brasil"}},
     {"name":"Correr", "date": new Date(), "time": "9am", "location": {"address": "Rua São Paulo", "city": "São Paulo", "country": "Brasil"}}
@@ -37,6 +39,11 @@ export class MyServiceService {
 
   savePost(userId: number, post: any): Observable<any> {
     return this.http.post(`https://jsonplaceholder.typicode.com/posts/${userId}/comments`, post);
+
+  }
+
+  getPhotos(): Observable<any> {
+    return this.http.get(this.apiUrl);
 
   }
 

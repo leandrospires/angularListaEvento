@@ -2,6 +2,10 @@ instalar bootstrap
 
 : npm i bootstrap
 
+instalar cdk
+
+: npm i @angular/cdk
+
 https://github.com/leandrospires/angularListaEvento
 
 http://jsonplaceholder.typicode.com/users
